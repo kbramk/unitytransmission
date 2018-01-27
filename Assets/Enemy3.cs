@@ -23,7 +23,7 @@ public class Enemy3 : MonoBehaviour
         if (Transmitter.transmit1 == true)
         {
             target = mPlayer;
-            speed = 2f;
+            speed = 2.5f;
             var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
             print("transmit1truexd");
@@ -31,7 +31,7 @@ public class Enemy3 : MonoBehaviour
         if (Transmitter.transmit2 == true)
         {
             target = mPlayer;
-            speed = 1f;
+            speed = 0.5f;
             var direction = -(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
             print("transmit2truexd");

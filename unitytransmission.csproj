@@ -298,6 +298,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DogeCoin.cs" />
+    <Compile Include="Assets\DogeCoinMaker.cs" />
     <Compile Include="Assets\Enemy1.cs" />
     <Compile Include="Assets\Enemy1-old.cs" />
     <Compile Include="Assets\Enemy2.cs" />

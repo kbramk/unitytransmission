@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DogeCoin : MonoBehaviour {
 
+    //coinmaker = GameObject.FindGameObjectWithTag("CoinMaker");
     private bool collected = false;
 
     void OnCollisionEnter(Collision col)
@@ -13,6 +14,7 @@ public class DogeCoin : MonoBehaviour {
         {
             print("score+1");
             Player.score = Player.score + 1;
+            //DogeCoinMaker.makecoin = true;
             Destroy(this.gameObject);
         }
     }

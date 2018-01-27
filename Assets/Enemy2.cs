@@ -23,14 +23,14 @@ public class Enemy2 : MonoBehaviour
         if (Transmitter.transmit1 == true)
         {
             target = mPlayer;
-            speed = 1f;
+            speed = 2f;
             var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
         }
         if (Transmitter.transmit2 == true)
         {
             target = mPlayer;
-            speed = 2f;
+            speed = 3f;
             var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
         }

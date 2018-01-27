@@ -35,7 +35,7 @@ public class Enemy1 : MonoBehaviour
         if (Transmitter.transmit3 == true)
         {
             target = mPlayer;
-            speed = 2f;
+            speed = 3f;
             var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
             

@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Transmitter : MonoBehaviour
 {
+    public List<GameObject> myTransmissions;
+
     string transmission;
     public string Transmission
     {
@@ -29,6 +32,7 @@ public class Transmitter : MonoBehaviour
     void Start()
     {
         mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        
     }
 
     // Update is called once per frame
