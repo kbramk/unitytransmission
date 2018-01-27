@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Transmitter : MonoBehaviour {
 
-    public bool transmit1 = true;
-    public bool transmit2 = false;
-    public bool transmit3 = false;
+    public static bool transmit1 = true;
+    public static bool transmit2 = false;
+    public static bool transmit3 = false;
 
     // Use this for initialization
     void Start() {
