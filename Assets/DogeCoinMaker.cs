@@ -2,24 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DogeCoinMaker : MonoBehaviour {
+public class DogeCoinMaker : MonoBehaviour
+{
+    public GameObject prototype;
+    private GameObject clone;
 
-    public bool makecoin = true;
+    int GenerateRandomRange()
+    {
+        return Random.Range(-4, 4);
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (makecoin == true)
+    void Update()
+    {
+        if (clone == null)
         {
-           // Instantiate(DogeCoin, new Vector3(Random.Range(-9, 10), Random.Range(-5, 5) , 0), Quaternion.identity);
-            makecoin = false;
+            clone = Spawn();
         }
     }
 
-
-
+    GameObject Spawn()
+    {
+        return Instantiate(prototype,
+                        new Vector3(GenerateRandomRange(),
+                            GenerateRandomRange(),
+                            0),
+                        Quaternion.identity);
+    }
 }
