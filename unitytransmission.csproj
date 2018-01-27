@@ -299,8 +299,10 @@
   <ItemGroup>
     <Compile Include="Assets\DogeCoin.cs" />
     <Compile Include="Assets\Enemy1.cs" />
+    <Compile Include="Assets\Enemy3.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\Receiver.cs" />
     <Compile Include="Assets\Transmitter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
