@@ -1,6 +1,3 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/.vs/unitytransmission/v15/Server/sqlite3
+/Library
 /Temp
+/ProjectSettings
