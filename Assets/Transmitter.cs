@@ -43,6 +43,9 @@ public class Transmitter : MonoBehaviour
             transmit1 = true;
             transmit2 = false;
             transmit3 = false;
+            myTransmissions[0].SetActive(true);
+            myTransmissions[1].SetActive(false);
+            myTransmissions[2].SetActive(false);
             print("1 was pressed");
             mPlayer.transmit1text.text = "Active";
             mPlayer.transmit2text.text = "";

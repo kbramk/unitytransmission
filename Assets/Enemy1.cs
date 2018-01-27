@@ -22,20 +22,24 @@ public class Enemy1 : MonoBehaviour
     {
         if (Transmitter.transmit1 == true)
         {
+            target = mPlayer;
+            speed = 0.5f;
+            var direction = (target.transform.position - this.transform.position);
+            this.transform.Translate(direction * speed * Time.deltaTime);
             print("transmit1truexd");
         }
         if (Transmitter.transmit2 == true)
         {
             target = mPlayer;
-            speed = 1f;
-            var direction = -(target.transform.position - this.transform.position);
+            speed = 2f;
+            var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
             print("transmit2truexd");
         }
         if (Transmitter.transmit3 == true)
         {
             target = mPlayer;
-            speed = 3f;
+            speed = 4f;
             var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
             
