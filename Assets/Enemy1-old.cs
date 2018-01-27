@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Enemy1 : Receiver
+public class Enemy1old : Receiver
 {
 
     protected override void InteractWithTarget()

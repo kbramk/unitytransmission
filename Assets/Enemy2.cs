@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
 
     private GameObject mPlayer;
@@ -22,24 +22,24 @@ public class Enemy1 : MonoBehaviour
     {
         if (Transmitter.transmit1 == true)
         {
-            print("transmit1truexd");
-        }
-        if (Transmitter.transmit2 == true)
-        {
             target = mPlayer;
             speed = 1f;
-            var direction = -(target.transform.position - this.transform.position);
+            var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            print("transmit2truexd");
         }
-        if (Transmitter.transmit3 == true)
+        if (Transmitter.transmit2 == true)
         {
             target = mPlayer;
             speed = 2f;
             var direction = (target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            
-            print("transmit3truexd");
+        }
+        if (Transmitter.transmit3 == true)
+        {
+            target = mPlayer;
+            speed = 0.5f;
+            var direction = (target.transform.position - this.transform.position);
+            this.transform.Translate(direction * speed * Time.deltaTime);
         }
 
 
