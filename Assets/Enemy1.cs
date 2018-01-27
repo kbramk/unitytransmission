@@ -1,26 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
-public class Enemy1 : MonoBehaviour {
+public class Enemy1 : Receiver
+{
 
-    private 
+    protected override void InteractWithTarget()
+    {
+        if (target == null) { return; }
+        print("I'm going to move toward my target with tag " + target.tag + " and name " + target.name);
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Transmitter.transmit1 == true) {
-            print("transmit1truexd");
+    protected override void Transmitter_TransmissionChanged(Transmitter sender, EventArgs e)
+    {
+        if (sender.Transmission == "1")
+        {
+            print("Found a new target that is transmitting signal 1!");
+            target = sender.gameObject;
         }
-        if (Transmitter.transmit2 == true) {
-            print("transmit2truexd");
-        }
-        if (Transmitter.transmit3 == true) {
-            print("transmit3truexd");
+        else if (sender.Transmission != "1" && target == sender.gameObject)
+        {
+            print("My old target stopped transmitting signal 1.");
+            target = null;
         }
     }
 }

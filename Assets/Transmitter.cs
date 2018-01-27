@@ -1,22 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-public class Transmitter : MonoBehaviour {
+public class Transmitter : MonoBehaviour
+{
+    string transmission;
+    public string Transmission
+    {
+        get
+        {
+            return transmission;
+        }
+        private set
+        {
+            transmission = value;
+            if (TransmissionChanged == null) { return; }
+            TransmissionChanged.Invoke(this, new EventArgs());
+        }
+    }
+    public event EventHandler TransmissionChanged;
 
     public static bool transmit1 = true;
     public static bool transmit2 = false;
     public static bool transmit3 = false;
 
-    private Player mPlayer; 
+    private Player mPlayer;
 
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
         mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         if (Input.GetKeyDown("1"))
         {
             transmit1 = true;
@@ -26,6 +43,7 @@ public class Transmitter : MonoBehaviour {
             mPlayer.transmit1text.text = "Active";
             mPlayer.transmit2text.text = "";
             mPlayer.transmit3text.text = "";
+            Transmission = "1";
             //wait 1 second or some kind of code to disable the other 2 keys for a second
         }
 
@@ -38,6 +56,7 @@ public class Transmitter : MonoBehaviour {
             mPlayer.transmit1text.text = "";
             mPlayer.transmit2text.text = "Active";
             mPlayer.transmit3text.text = "";
+            Transmission = "2";
             //wait 1 second
         }
 
@@ -50,10 +69,8 @@ public class Transmitter : MonoBehaviour {
             mPlayer.transmit1text.text = "";
             mPlayer.transmit2text.text = "";
             mPlayer.transmit3text.text = "Active";
+            Transmission = "3";
             //wait 1 second
         }
     }
-
-
-
 }
