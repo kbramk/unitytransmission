@@ -7,8 +7,7 @@ public class Enemy3 : MonoBehaviour
 
     private GameObject mPlayer;
     private GameObject target;
-    private float speed;
-    private var direction;
+    private float speed = 1;
 
     private
 
@@ -24,11 +23,17 @@ public class Enemy3 : MonoBehaviour
         if (Transmitter.transmit1 == true)
         {
             target = mPlayer;
-            speed = 2.5f;
+            speed = 2f;
+            var direction = (target.transform.position - this.transform.position);
+            this.transform.Translate(direction * speed * Time.deltaTime);
             print("transmit1truexd");
         }
         if (Transmitter.transmit2 == true)
         {
+            target = mPlayer;
+            speed = 1f;
+            var direction = (target.transform.position - this.transform.position);
+            this.transform.Translate(direction * speed * Time.deltaTime);
             print("transmit2truexd");
         }
         if (Transmitter.transmit3 == true)
@@ -36,8 +41,8 @@ public class Enemy3 : MonoBehaviour
             print("transmit3truexd");
         }
 
-        direction = (target.transform.position - this.transform.position);
-        this.transform.position = Vector3.Distance (target.transform.position - this.transform.position) * speed;
+        
+        //this.transform.position = Vector3.Distance (target.transform.position, this.transform.position) * speed *Time.deltaTime;
 
     }
 }
