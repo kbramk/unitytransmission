@@ -1932,7 +1932,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9e42d539007b24592035d8cdeff793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myTransmissions: []
+  myTransmissions:
+  - {fileID: 505097604}
+  - {fileID: 1305178945}
+  - {fileID: 1876725684}
 --- !u!23 &1513058454
 MeshRenderer:
   m_ObjectHideFlags: 0

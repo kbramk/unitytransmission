@@ -32,7 +32,9 @@ public class Transmitter : MonoBehaviour
     void Start()
     {
         mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        
+        myTransmissions[0].SetActive(true);
+        myTransmissions[1].SetActive(false);
+        myTransmissions[2].SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,6 +61,9 @@ public class Transmitter : MonoBehaviour
             transmit1 = false;
             transmit2 = true;
             transmit3 = false;
+            myTransmissions[0].SetActive(false);
+            myTransmissions[1].SetActive(true);
+            myTransmissions[2].SetActive(false);
             print("2 was pressed");
             mPlayer.transmit1text.text = "";
             mPlayer.transmit2text.text = "Active";
@@ -72,6 +77,9 @@ public class Transmitter : MonoBehaviour
             transmit1 = false;
             transmit2 = false;
             transmit3 = true;
+            myTransmissions[0].SetActive(false);
+            myTransmissions[1].SetActive(false);
+            myTransmissions[2].SetActive(true);
             print("3 was pressed");
             mPlayer.transmit1text.text = "";
             mPlayer.transmit2text.text = "";
