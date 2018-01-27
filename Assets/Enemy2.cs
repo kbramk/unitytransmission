@@ -42,8 +42,15 @@ public class Enemy2 : MonoBehaviour
             this.transform.Translate(direction * speed * Time.deltaTime);
         }
 
+    }
 
-        //this.transform.position = Vector3.Distance (target.transform.position, this.transform.position) * speed *Time.deltaTime;
-
+    void OnCollisionEnter(Collision col)
+    {
+        print("collide");
+        if (col.gameObject.name == "Player")
+        {
+            Player.health = Player.health - 1;
+            print(Player.health);
+        }
     }
 }

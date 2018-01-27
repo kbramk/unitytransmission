@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public bool playertarget;
+    public static int health = 10;
     public static int score;
     public Text scoretext;
     public Text transmit1text;
@@ -23,5 +24,9 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         scoretext.text = score + "";
+
+        if (Player.health <= 0){
+            Destroy(this.gameObject);
+        }
     }
 }
