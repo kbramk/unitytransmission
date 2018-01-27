@@ -4,3 +4,6 @@
 /.vs
 *.meta
 *.unity
+/obj
+/bin
+Assembly-CSharp.csproj
