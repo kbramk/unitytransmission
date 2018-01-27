@@ -8,9 +8,11 @@ public class Transmitter : MonoBehaviour {
     public static bool transmit2 = false;
     public static bool transmit3 = false;
 
+    private Player mPlayer; 
+
     // Use this for initialization
     void Start() {
-
+        mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,9 @@ public class Transmitter : MonoBehaviour {
             transmit2 = false;
             transmit3 = false;
             print("1 was pressed");
+            mPlayer.transmit1text.text = "Active";
+            mPlayer.transmit2text.text = "";
+            mPlayer.transmit3text.text = "";
             //wait 1 second or some kind of code to disable the other 2 keys for a second
         }
 
@@ -30,6 +35,9 @@ public class Transmitter : MonoBehaviour {
             transmit2 = true;
             transmit3 = false;
             print("2 was pressed");
+            mPlayer.transmit1text.text = "";
+            mPlayer.transmit2text.text = "Active";
+            mPlayer.transmit3text.text = "";
             //wait 1 second
         }
 
@@ -39,6 +47,9 @@ public class Transmitter : MonoBehaviour {
             transmit2 = false;
             transmit3 = true;
             print("3 was pressed");
+            mPlayer.transmit1text.text = "";
+            mPlayer.transmit2text.text = "";
+            mPlayer.transmit3text.text = "Active";
             //wait 1 second
         }
     }
