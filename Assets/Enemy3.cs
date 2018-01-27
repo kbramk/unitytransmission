@@ -32,7 +32,7 @@ public class Enemy3 : MonoBehaviour
         {
             target = mPlayer;
             speed = 1f;
-            var direction = (target.transform.position - this.transform.position);
+            var direction = -(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
             print("transmit2truexd");
         }

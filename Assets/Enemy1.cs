@@ -1,25 +1,49 @@
-﻿using System;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Enemy1 : Receiver
+public class Enemy3 : MonoBehaviour
 {
 
-    protected override void InteractWithTarget()
+    private GameObject mPlayer;
+    private GameObject target;
+    private float speed = 1;
+
+    private
+
+    // Use this for initialization
+    void Start()
     {
-        if (target == null) { return; }
-        print("I'm going to move toward my target with tag " + target.tag + " and name " + target.name);
+        mPlayer = GameObject.FindGameObjectWithTag("Player");//.GetComponent<Player>();
     }
 
-    protected override void Transmitter_TransmissionChanged(Transmitter sender, EventArgs e)
+    // Update is called once per frame
+    void Update()
     {
-        if (sender.Transmission == "1")
+        if (Transmitter.transmit1 == true)
         {
-            print("Found a new target that is transmitting signal 1!");
-            target = sender.gameObject;
+            print("transmit1truexd");
         }
-        else if (sender.Transmission != "1" && target == sender.gameObject)
+        if (Transmitter.transmit2 == true)
         {
-            print("My old target stopped transmitting signal 1.");
-            target = null;
+            target = mPlayer;
+            speed = 1f;
+            var direction = -(target.transform.position - this.transform.position);
+            this.transform.Translate(direction * speed * Time.deltaTime);
+            print("transmit2truexd");
         }
+        if (Transmitter.transmit3 == true)
+        {
+            target = mPlayer;
+            speed = 2f;
+            var direction = (target.transform.position - this.transform.position);
+            this.transform.Translate(direction * speed * Time.deltaTime);
+            
+            print("transmit3truexd");
+        }
+
+
+        //this.transform.position = Vector3.Distance (target.transform.position, this.transform.position) * speed *Time.deltaTime;
+
     }
 }

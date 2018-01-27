@@ -1,14 +1,2 @@
-/Library
-/Temp
-/ProjectSettings
-/.vs
-*.meta
-*.unity
-/obj
-/bin
-Assembly-CSharp.csproj
-.vs
-Library
-obj
-ProjectSettings
-Temp
+*.lock
+UnityLockFile

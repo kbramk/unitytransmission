@@ -299,6 +299,7 @@
   <ItemGroup>
     <Compile Include="Assets\DogeCoin.cs" />
     <Compile Include="Assets\Enemy1.cs" />
+    <Compile Include="Assets\Enemy1-old.cs" />
     <Compile Include="Assets\Enemy3.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\PlayerController.cs" />
