@@ -12,6 +12,7 @@ public class DogeCoin : MonoBehaviour
         {
             print("score+1");
             Player.score = Player.score + 1;
+           // AudioSource.Play;
             Destroy(gameObject);
         }
     }

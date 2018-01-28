@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       scoretext.text = score + "";
+       //scoretext.text = score + "";
 
         if (Input.anyKey)
         {
