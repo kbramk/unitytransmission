@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
         scoretext.text = score + "";
 
         if (Player.health <= 0){
-            SceneManager.LoadScene("scene1");
+            SceneManager.LoadScene("GameOver");
             //Destroy(this.gameObject);
         }
         //if (Player.transform.position >= 100) {
