@@ -19,7 +19,6 @@ public class DogeCoinMaker : MonoBehaviour
 
     void Update()
     {
-        print(CoinObject.transform.position);
         if (clone == null)
         {
             clone = Spawn();

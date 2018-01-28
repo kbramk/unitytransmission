@@ -22,7 +22,7 @@ public class Enemy3 : MonoBehaviour
     {
         if (Transmitter.transmit1 == true)
         {
-            target = DogeCoinMaker.CoinObject;
+            target = mPlayer;
             speed = 1.5f;
             var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
@@ -36,7 +36,7 @@ public class Enemy3 : MonoBehaviour
         }
         if (Transmitter.transmit3 == true)
         {
-            target = mPlayer;
+            target = DogeCoinMaker.CoinObject;
             speed = 2.5f;
             var direction = -Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);

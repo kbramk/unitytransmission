@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class walls : MonoBehaviour {
 
-    public static int width = 18;
+    public static int width = 16;
     public static int height = 1;
     public static int uppery = height / 2;
     public static int lowery = - (height / 2);

@@ -29,14 +29,14 @@ public class Enemy2 : MonoBehaviour
         }
         if (Transmitter.transmit2 == true)
         {
-            target = mPlayer;
+            target = DogeCoinMaker.CoinObject;
             speed = 2f;
             var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
         }
         if (Transmitter.transmit3 == true)
         {
-            target = DogeCoinMaker.CoinObject;
+            target = mPlayer;
             speed = 0.5f;
             var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
