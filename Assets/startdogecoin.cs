@@ -31,6 +31,25 @@ public class startdogecoin : MonoBehaviour
         void Update()
     {
         //scoretext.text = score + "";
-
+        float outofbounddown = -5f;
+        if (gameObject.transform.position.y <= outofbounddown)
+        {
+            SceneManager.LoadScene("scene1");
+        }
+        float outofboundup = 5f;
+        if (gameObject.transform.position.y >= outofboundup)
+        {
+            SceneManager.LoadScene("scene1");
+        }
+        float outofboundleft = -10f;
+        if (gameObject.transform.position.x <= outofboundleft)
+        {
+            SceneManager.LoadScene("scene1");
+        }
+        float outofboundright = 10f;
+        if (gameObject.transform.position.x >= outofboundright)
+        {
+            SceneManager.LoadScene("scene1");
+        }
     }
 }
