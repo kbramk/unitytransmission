@@ -35,6 +35,25 @@ public class Player : MonoBehaviour {
         //if (Player.transform.position >= 100) {
         //    SceneManager.LoadScene("scene1");
         //}
-
+        float outofbounddown = -10f;
+        if (gameObject.transform.position.y <= outofbounddown)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        float outofboundup = 10f;
+        if (gameObject.transform.position.y >= outofboundup)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        float outofboundleft = -15f;
+        if (gameObject.transform.position.x <= outofboundleft)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+        float outofboundright = 15f;
+        if (gameObject.transform.position.x >= outofboundright)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

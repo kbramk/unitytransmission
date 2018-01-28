@@ -308,6 +308,7 @@
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\Receiver.cs" />
+    <Compile Include="Assets\startdogecoin.cs" />
     <Compile Include="Assets\Transmitter.cs" />
     <Compile Include="Assets\walls.cs" />
   </ItemGroup>
