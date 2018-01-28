@@ -40,7 +40,7 @@ public class Transmitter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("1"))
+        if ((Input.GetKeyDown("1")) || (Input.GetKeyDown(KeyCode.Keypad1)))
         {
             transmit1 = true;
             transmit2 = false;
@@ -56,7 +56,7 @@ public class Transmitter : MonoBehaviour
             //wait 1 second or some kind of code to disable the other 2 keys for a second
         }
 
-        if (Input.GetKeyDown("2"))
+        if ((Input.GetKeyDown("2")) || (Input.GetKeyDown(KeyCode.Keypad2)))
         {
             transmit1 = false;
             transmit2 = true;
@@ -72,7 +72,7 @@ public class Transmitter : MonoBehaviour
             //wait 1 second
         }
 
-        if (Input.GetKeyDown("3"))
+        if ((Input.GetKeyDown("3")) || (Input.GetKeyDown(KeyCode.Keypad3)))
         {
             transmit1 = false;
             transmit2 = false;
