@@ -14,6 +14,10 @@ public class Player : MonoBehaviour {
     public Text transmit2text;
     public Text transmit3text;
 
+    public GameObject dontknowtheway;
+    public AudioClip audiodont;
+    private bool dontplayed = false;
+
     // Use this for initialization
     void Awake () {
         health = 10;
@@ -27,6 +31,13 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         scoretext.text = score + "";
+
+        if (Player.health <= 5 && dontplayed == false)
+        {
+            print("health <5");
+            dontknowtheway.GetComponent<AudioSource>().PlayOneShot(audiodont);
+            dontplayed = true;
+        }
 
         if (Player.health <= 0){
             SceneManager.LoadScene("GameOver");
