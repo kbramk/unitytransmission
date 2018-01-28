@@ -303,8 +303,10 @@
     <Compile Include="Assets\Enemy1-old.cs" />
     <Compile Include="Assets\Enemy2.cs" />
     <Compile Include="Assets\Enemy3.cs" />
+    <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\Receiver.cs" />
     <Compile Include="Assets\Transmitter.cs" />
     <Compile Include="Assets\walls.cs" />

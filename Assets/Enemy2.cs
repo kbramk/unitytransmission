@@ -37,7 +37,7 @@ public class Enemy2 : MonoBehaviour
         if (Transmitter.transmit3 == true)
         {
             target = mPlayer;
-            speed = 0.5f;
+            speed = 1f;
             var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
         }

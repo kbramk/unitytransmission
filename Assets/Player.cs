@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
     public bool playertarget;
-    public static int health = 10;
+    public static int health;
     public static int score;
     public Text scoretext;
     public Text transmit1text;
@@ -14,7 +15,9 @@ public class Player : MonoBehaviour {
     public Text transmit3text;
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
+        health = 10;
+        score = 0;
         scoretext.text = score + "";
         transmit1text.text = "Active";
         transmit2text.text = "";
@@ -26,7 +29,12 @@ public class Player : MonoBehaviour {
         scoretext.text = score + "";
 
         if (Player.health <= 0){
-            Destroy(this.gameObject);
+            SceneManager.LoadScene("scene1");
+            //Destroy(this.gameObject);
         }
+        //if (Player.transform.position >= 100) {
+        //    SceneManager.LoadScene("scene1");
+        //}
+
     }
 }
