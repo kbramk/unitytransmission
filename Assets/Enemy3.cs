@@ -22,28 +22,24 @@ public class Enemy3 : MonoBehaviour
     {
         if (Transmitter.transmit1 == true)
         {
-            target = mPlayer;
+            target = DogeCoinMaker.CoinObject;
             speed = 1.5f;
-            var direction = (target.transform.position - this.transform.position);
+            var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            print("transmit1truexd");
         }
         if (Transmitter.transmit2 == true)
         {
             target = mPlayer;
             speed = 3.5f;
-            var direction = (target.transform.position - this.transform.position);
+            var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            print("transmit2truexd");
         }
         if (Transmitter.transmit3 == true)
         {
             target = mPlayer;
             speed = 2.5f;
-            var direction = -(target.transform.position - this.transform.position);
+            var direction = -Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            print("transmit2truexd");
-            print("transmit3truexd");
         }
 
     }

@@ -5,7 +5,11 @@ using UnityEngine;
 public class DogeCoinMaker : MonoBehaviour
 {
     public GameObject prototype;
-    private GameObject clone;
+    private static GameObject clone;
+    public static GameObject CoinObject
+    {
+        get { return clone; }
+    }
 
 
     /*int GenerateRandomRange()
@@ -15,6 +19,7 @@ public class DogeCoinMaker : MonoBehaviour
 
     void Update()
     {
+        print(CoinObject.transform.position);
         if (clone == null)
         {
             clone = Spawn();
@@ -28,5 +33,6 @@ public class DogeCoinMaker : MonoBehaviour
                             Random.Range(walls.lowery, walls.uppery),
                             0),
                         Quaternion.identity);
+        
     }
 }

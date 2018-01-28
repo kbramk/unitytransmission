@@ -8,6 +8,7 @@ public class Enemy1 : MonoBehaviour
     private GameObject mPlayer;
     private GameObject target;
     private float speed = 1;
+    
 
     private
 
@@ -22,28 +23,24 @@ public class Enemy1 : MonoBehaviour
     {
         if (Transmitter.transmit1 == true)
         {
-            target = mPlayer;
+            target = DogeCoinMaker.CoinObject;
             speed = 0.5f;
-            var direction = (target.transform.position - this.transform.position);
+            var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            print("transmit1truexd");
         }
         if (Transmitter.transmit2 == true)
         {
             target = mPlayer;
             speed = 2f;
-            var direction = (target.transform.position - this.transform.position);
+            var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            print("transmit2truexd");
         }
         if (Transmitter.transmit3 == true)
         {
             target = mPlayer;
             speed = 4f;
-            var direction = (target.transform.position - this.transform.position);
+            var direction = Vector3.Normalize(target.transform.position - this.transform.position);
             this.transform.Translate(direction * speed * Time.deltaTime);
-            
-            print("transmit3truexd");
         }
 
     }

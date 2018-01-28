@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DogeCoin : MonoBehaviour
 {
+
     void OnCollisionEnter(Collision col)
     {
         print("collide");
