@@ -40,6 +40,7 @@ public class Player : MonoBehaviour {
         }
 
         if (Player.health <= 0){
+            //endgamescore = score;
             SceneManager.LoadScene("GameOver");
             //Destroy(this.gameObject);
         }
