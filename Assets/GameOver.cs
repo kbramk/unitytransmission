@@ -27,7 +27,7 @@ public class GameOver : MonoBehaviour
         if (Input.anyKey)
         {
             score = 0;
-            SceneManager.LoadScene("scene1");
+            SceneManager.LoadScene("title");
           }
 
     }

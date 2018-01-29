@@ -1,4 +1,4 @@
-WindowsStandalone
+OSXStandalone
 SceneListBegin?
 Assets/title.unity
 Assets/scene1.unity
