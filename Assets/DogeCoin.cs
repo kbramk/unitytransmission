@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DogeCoin : MonoBehaviour
 {
+    public AudioSource coinsound;
     
     void OnCollisionEnter(Collision col)
     {
@@ -13,7 +14,9 @@ public class DogeCoin : MonoBehaviour
             print("score+1");
             Player.score = Player.score + 1;
             print(GetComponent<AudioSource>());
-            GetComponent<AudioSource>().Play();
+            if (coinsound != null) {
+            coinsound.Play();
+            }
             Destroy(gameObject);
         }
     }
